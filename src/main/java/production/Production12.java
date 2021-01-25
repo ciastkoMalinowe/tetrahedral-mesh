@@ -44,8 +44,8 @@ public class Production12 extends AbstractProduction {
             List<GraphNode> siblings = n.getSiblings().filter(topLevelNodes::contains).collect(Collectors.toList());
 
             return siblings.size() == 2 &&
-                    (siblings.get(0).getCoordinates().getX() + siblings.get(1).getCoordinates().getX()) / 2 != n.getCoordinates().getX() &&
-                    (siblings.get(0).getCoordinates().getY() + siblings.get(1).getCoordinates().getY()) / 2 != n.getCoordinates().getY();
+                    ((siblings.get(0).getCoordinates().getX() + siblings.get(1).getCoordinates().getX()) / 2 != n.getCoordinates().getX() ||
+                    (siblings.get(0).getCoordinates().getY() + siblings.get(1).getCoordinates().getY()) / 2 != n.getCoordinates().getY());
         }).collect(Collectors.toList());
 
         if (topExteriorList.size() != 1) return false;
