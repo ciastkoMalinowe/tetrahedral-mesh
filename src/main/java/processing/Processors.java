@@ -14,6 +14,7 @@ public class Processors {
             new Assignment6Processor(),
             new Assignment7Processor(),
             new AssignmentAProcessor(),
+            new AssignmentCProcessor(),
             new AssignmentDProcessor()
     };
 
